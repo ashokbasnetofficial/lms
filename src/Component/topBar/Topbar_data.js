@@ -1,0 +1,22 @@
+export const cities =[
+    {
+        id:1,
+        title:'Kathmandu'
+    },
+    {
+        id:2,
+        title:'Nepalganj'
+    }, 
+     {
+        id:1,
+        title:'Pokhara'
+    },
+    {
+        id:1,
+        title:'Birtanagar'
+    },
+    {
+        id:1,
+        title:'Ilam'
+    },
+]
