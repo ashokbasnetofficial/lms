@@ -1,1 +1,1 @@
-export default baseURL = 'https://fakestoreapi.com/users';
+export default baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=kathmandu&appid=6ae8cd43b542c4f0f0301d46c11288f3';

@@ -8,15 +8,15 @@ export const cities =[
         title:'Nepalganj'
     }, 
      {
-        id:1,
+        id:3,
         title:'Pokhara'
     },
     {
-        id:1,
+        id:4,
         title:'Birtanagar'
     },
     {
-        id:1,
+        id:5,
         title:'Ilam'
     },
 ]
