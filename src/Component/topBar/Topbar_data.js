@@ -5,7 +5,7 @@ export const cities =[
     },
     {
         id:2,
-        title:'Nepalganj'
+        title:'Nepalgunj'
     }, 
      {
         id:3,
@@ -13,7 +13,7 @@ export const cities =[
     },
     {
         id:4,
-        title:'Birtanagar'
+        title:'Biratnagar'
     },
     {
         id:5,

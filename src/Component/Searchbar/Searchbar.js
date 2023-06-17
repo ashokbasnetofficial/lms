@@ -9,8 +9,8 @@ const Searchbar = (props) => {
     const [input,setInput]=useState('')
     console.log(input)
     const searchHandle =()=>{
-      setQuery({q:input})
-
+    if(input!=='') setQuery({q:input})
+   
     }
     return (
         <div className="flex items-center w-full relative">

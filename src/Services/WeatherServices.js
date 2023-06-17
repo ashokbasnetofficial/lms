@@ -9,7 +9,7 @@ const getWeatherData = (infoType, searchParams) => {
     const url = new URL(BASE_URL + "/" + infoType);
     url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
     const response = fetch(url).then(res => res.json())
-
+   
     return response;
 };
 const formatCurrentWeather = (data) => {
@@ -67,6 +67,8 @@ const formatForecastData = (data) => {
 }
 const getFormattedWeather = async (searchParams) => {
 
+try{
+     
     const formattedCurrentWeather = await getWeatherData('weather', searchParams).then(formatCurrentWeather)
     const { lon, lat } = formattedCurrentWeather;
     const formattedForecastData = await getWeatherData('onecall', {
@@ -75,8 +77,15 @@ const getFormattedWeather = async (searchParams) => {
         exclude:'current,minutely,alerts',
         units:searchParams.units
     }).then(formatForecastData)
-
-    return { ...formattedCurrentWeather, ...formattedForecastData };
+    
+  return { ...formattedCurrentWeather, ...formattedForecastData };
+}
+catch(error){
+    console.error('Error fetching weather data:', error);
+    
+    throw error; 
+   
+}
 }
 const formatLocalTime = (secs, zone, format = "cccc,dd LLL yyyy' | Local time:'hh:mm a") => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
 
